@@ -1,5 +1,7 @@
 import React from "react"
 import headerImg from "../assets/img/site-logo.png"
+import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Header = () => {
   return (
@@ -8,9 +10,9 @@ const Header = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="header-logo">
-              <a href="!#">
-                <img src={headerImg} alt="..." />
-              </a>
+              <Link to="/">
+                <StaticImage src="../assets/img/site-logo.png" />
+              </Link>
             </div>
           </div>
         </div>
