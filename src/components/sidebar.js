@@ -1,52 +1,10 @@
 import React from "react"
 import authorImg from "../assets/img/ga-png.jpeg"
 import CommonList from "./CommonList"
+import SidebarWidgetRecetPosts from "./SidebarWidgetRecetPosts"
+import SidebarWidgetTags from "./SidebarWidgetTags"
 
 const aboutListData = ["Email", "Twitter", "Github", "Instagram", "LinkedIn"]
-
-const recentPostData = [
-  "Bulbasaur Pokeball Moss Terrarium",
-  "Halloween 2017 Demon Gargoyle",
-  "Python and the 555 Blinking Eyes in the Bushes",
-  "Ingress: Dangers and First Impressions",
-  "Hello World Update",
-]
-
-const archiveData1 = [
-  "March 2020",
-  "November 2017",
-  "November 2012",
-  "October 2012",
-  "March 2012",
-  "July 2011",
-  "February 2011",
-  "March 2010",
-  "February 2010",
-  "January 2010",
-  "December 2009",
-  "November 2009",
-  "February 2009",
-  "November 2008",
-  "May 2008",
-  "April 2008",
-]
-
-const archiveData2 = [
-  "Agile",
-  "Data",
-  "Distributed Computing",
-  "Django",
-  "Education",
-  "Entrepreneurship",
-  "Games",
-  "Local Business",
-  "Machine Learning",
-  "Maker",
-  "Presentation",
-  "Python",
-  "Software Engineering",
-  "Uncategorized",
-]
 
 const Sidebar = () => {
   return (
@@ -80,24 +38,8 @@ const Sidebar = () => {
             reflect the views and opinions of my employers and clients.
           </p>
         </div>
-        <div className="post-list-wrap">
-          <p>Recent Posts</p>
-          <div className="about-list post">
-            <CommonList data={recentPostData} />
-          </div>
-        </div>
-        <div className="post-list-wrap post-last">
-          <p>Archives</p>
-          <div className="about-list post">
-            <CommonList data={archiveData1} />
-          </div>
-        </div>
-        <div className="post-list-wrap post-last">
-          <p>Archives</p>
-          <div className="about-list post">
-            <CommonList data={archiveData2} />
-          </div>
-        </div>
+        <SidebarWidgetRecetPosts />
+        <SidebarWidgetTags />
       </div>
     </div>
   )

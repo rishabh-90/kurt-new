@@ -5,7 +5,6 @@ import Sidebar from "../components/sidebar"
 import { graphql } from "gatsby"
 
 const Post = ({ data }) => {
-  console.log(data)
   const { markdownRemark } = data
   return (
     <Layout>
@@ -16,7 +15,7 @@ const Post = ({ data }) => {
               <div className="main-left">
                 <BlogPost
                   title={markdownRemark.frontmatter.title}
-                  content={markdownRemark.frontmatter.description}
+                  content={markdownRemark.html}
                   date={markdownRemark.frontmatter.date}
                   showCommentBox={true}
                   id={markdownRemark.id}
@@ -41,6 +40,7 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      html
       frontmatter {
         date
         title

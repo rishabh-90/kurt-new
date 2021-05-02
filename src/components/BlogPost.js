@@ -8,6 +8,7 @@ import { Link } from "gatsby"
 const TextWrapper = styled.div`
   padding: 20px 0;
   p {
+    margin: 20px 0;
   }
 `
 
